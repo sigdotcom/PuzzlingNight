@@ -1,0 +1,190 @@
+a {
+  text-decoration: none;
+}
+
+b {
+  animation: flicker 1.5s infinite alternate;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(#5400A8, #B8000099, #E8D000);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+header {
+  font-family: 'Audiowide', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h4 {
+  font-family: 'Aldrich', cursive;
+  font-size: 1.75rem;
+  height: 1.5rem;
+  color: white;
+  display: inline-block;
+  margin: 1rem 0 0 0;
+  outline: 0.25rem solid white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+img {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  max-height: 40vh;
+  min-height:25vh;
+}
+
+p {
+  font-family: 'Aldrich', cursive;
+  color: white;
+}
+
+section {
+  height: 100vh;
+}
+
+.landingText {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.learnHeaders {
+  font-size: 3rem;
+}
+
+.learnSection {
+  margin: 1rem;
+}
+
+.learnText {
+  font-size: 1rem;
+}
+
+.neon {
+  color: #fff;
+  text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff,
+    /* 0 0 21px #fff, */
+
+    /* Pink glow */
+    0 0 42px rgb(255, 0, 212),
+    0 0 82px rgb(255, 0, 212),
+    0 0 92px rgb(255, 0, 212),
+    0 0 102px rgb(255, 0, 212),
+    0 0 151px rgb(255, 0, 212);
+  
+  /* Optional flickering animation */
+  /* animation: flicker 1.5s infinite alternate; */
+}
+
+#landing {
+  margin: 1rem 4rem 1rem 1rem;
+}
+
+#landingWrapper {
+  text-align: right;
+}
+
+#learnMore {
+  margin: 1rem;
+  padding-top: 2rem;
+  display: flex;
+}
+
+#mainHeader {
+  font-size: 4rem;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+#rightSide {
+  flex-grow: 1;
+}
+
+#whatSection {
+  flex-grow: 1;
+}
+
+#whenSection {
+  margin-bottom: 3rem;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      /* White glow */
+      0 0 7px #fff,
+      0 0 10px #fff,
+      /* 0 0 21px #fff, */
+
+      /* Pink glow */
+      0 0 42px rgb(255, 0, 212),
+      0 0 82px rgb(255, 0, 212),
+      0 0 92px rgb(255, 0, 212),
+      0 0 102px rgb(255, 0, 212),
+      0 0 151px rgb(255, 0, 212);
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+
+/* mobile stuff */
+@media only screen and (max-width: 715px) {    
+  h4 {
+    font-family: 'Aldrich', cursive;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    display: inline-block;
+    margin: 1rem 0 0 0;
+    outline: 0.25rem solid white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  
+  /* img {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    max-height: 30vh;
+    min-height: 10vh;
+  } */
+  
+  .landingText {
+    font-size: 1.25rem;
+    text-align: right;
+  }
+  
+  .learnHeaders {
+    font-size: 2rem;
+  }
+
+  #learnMore {
+    margin: 1rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #mainHeader {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 4rem;
+  }
+
+  #whenSection {
+    margin-bottom: 20rem;
+  }
+}
